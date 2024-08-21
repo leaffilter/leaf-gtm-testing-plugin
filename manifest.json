@@ -1,0 +1,37 @@
+{
+  "name": "Leaf GTM Testing Plugin",
+  "description": "Testing and storage of GA Tags that fired.",
+  "version": "0.1",
+  "manifest_version": 3,
+  "content_security_policy": {
+    "script-src": "self",
+    "object-src": "self"
+  },
+  "background": {
+    "service_worker": "background/background.js",
+    "type": "module"
+  },
+  "web_accessible_resources": [{
+    "resources": [
+      "background/data-structure.json"
+    ],
+    "matches": []
+  }],
+  "options_page": "options/options.html",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "/images/twitter-plugin-16.png",
+      "32": "/images/twitter-plugin-32.png",
+      "48": "/images/twitter-plugin-48.png",
+      "128": "/images/twitter-plugin-128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/twitter-plugin-16.png",
+    "32": "/images/twitter-plugin-32.png",
+    "48": "/images/twitter-plugin-48.png",
+    "128": "/images/twitter-plugin-128.png"
+  }
+}
